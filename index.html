@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="zh-CN" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ratronic - 专业工业安全设备制造商，提供声光报警器、叉车安全系统等高品质工业安全产品">
-    <meta name="keywords" content="声光报警器,警灯,语音提示报警器,叉车超速报警器,叉车防撞报警器,叉车安全带报警器,工业安全设备">
-    <link rel="canonical" href="https://www.ratronic.com" />
-    <title>Ratronic | 专业工业安全设备制造商</title>
+    <meta name="description" content="Proratronic Ltd - Professional manufacturer of industrial safety equipment including alarm systems, warning lights, and forklift safety solutions">
+    <meta name="keywords" content="industrial alarm, warning light, forklift safety, safety beacon, voice alarm, speed alert system">
+    <link rel="canonical" href="https://www.proratronic.ltd" />
+    <title>Proratronic Ltd | Industrial Safety Equipment Manufacturer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 苹果风格配色 */
+        /* Apple-inspired color scheme */
         :root {
             --apple-blue: #0071e3;
             --apple-light-blue: #2997ff;
@@ -50,8 +50,16 @@
         .lang-switcher:hover {
             transform: scale(1.1);
         }
+		
+		.lang-switcher1 {
+            transition: all 0.3s ease;
+        }
         
-        /* 产品卡片悬停效果 */
+        .lang-switcher1:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Product card hover effect */
         .product-card {
             transition: all 0.3s ease;
         }
@@ -60,10 +68,26 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            transition: max-height 0.3s ease-out;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 2.5rem !important;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-50 text-gray-900">
-    <!-- 导航栏 -->
+    <!-- Navigation Bar -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
@@ -73,31 +97,31 @@
                     </a>
                     <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                         <a href="#home" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                            首页
+                            Home
                         </a>
                         <a href="#products" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                            产品中心
+                            Products
                         </a>
                         <a href="#about" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                            关于我们
+                            About Us
                         </a>
                         <a href="#contact" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                            联系我们
+                            Contact
                         </a>
                     </div>
                 </div>
                 <div class="hidden sm:ml-6 sm:flex sm:items-center">
                     <div class="flex space-x-4">
-                        <a href="#" class="lang-switcher px-3 py-2 rounded-md text-sm font-medium bg-blue-50 text-blue-700">EN</a>
-                        <a href="#" class="lang-switcher px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">中文</a>
+                        <a href="#" class="lang-switcher1 px-3 py-2 rounded-md text-sm font-medium bg-blue-50 text-blue-700">EN</a>
+                        <a href="./index_cn.html" class="lang-switcher px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">中文</a>
                     </div>
                     <button class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                        获取报价
+                        Get Quote
                     </button>
                 </div>
-                <div class="-mr-2 flex items-center sm:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">打开主菜单</span>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
                         <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -106,53 +130,44 @@
             </div>
         </div>
 
-        <!-- 移动端菜单 -->
-        <div class="sm:hidden hidden" id="mobile-menu">
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden" id="mobile-menu">
             <div class="pt-2 pb-3 space-y-1">
-                <a href="#home" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">首页</a>
-                <a href="#products" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">产品中心</a>
-                <a href="#about" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">关于我们</a>
-                <a href="#contact" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">联系我们</a>
+                <a href="#home" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="#products" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Products</a>
+                <a href="#about" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About Us</a>
+                <a href="#contact" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
                 <div class="pt-4 pb-3 border-t border-gray-200">
-                    <div class="flex items-center px-5">
-                        <div class="flex-shrink-0">
-                            <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/40" alt="">
-                        </div>
-                        <div class="ml-3">
-                            <div class="text-base font-medium text-gray-800">获取报价</div>
-                        </div>
-                    </div>
                     <div class="mt-3 space-y-1">
-                        <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100">EN</a>
-                        <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100">中文</a>
+                        <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100">Get Quote</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- 英雄区域 -->
+    <!-- Hero Section -->
     <section id="home" class="relative bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                 <div class="pt-10 mx-auto max-w-7xl px-4 sm:pt-12 sm:px-6 md:pt-16 lg:pt-20 lg:px-8 xl:pt-28">
                     <div class="sm:text-center lg:text-left">
-                        <h1 class="hero-text text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl fade-in">
-                            <span class="block">专业工业安全解决方案</span>
-                            <span class="block text-blue-600">为您的企业保驾护航</span>
+                        <h1 class="hero-text text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                            <span class="block">Industrial Safety Solutions</span>
+                            <span class="block text-blue-600">Engineered for Protection</span>
                         </h1>
-                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 fade-in">
-                            Ratronic 提供高质量的声光报警器和叉车安全系统，帮助您提升工作场所安全性，降低事故风险。
+                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Proratronic specializes in high-quality audible and visual alarm systems, forklift safety devices, and industrial warning solutions.
                         </p>
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start fade-in">
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                             <div class="rounded-md shadow">
                                 <a href="#products" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
-                                    查看产品
+                                    View Products
                                 </a>
                             </div>
                             <div class="mt-3 sm:mt-0 sm:ml-3">
                                 <a href="#contact" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">
-                                    联系我们
+                                    Contact Us
                                 </a>
                             </div>
                         </div>
@@ -161,131 +176,119 @@
             </div>
         </div>
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="工业安全设备">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Industrial safety equipment">
         </div>
     </section>
 
-    <!-- 产品分类 -->
+    <!-- Product Categories -->
     <section id="products" class="py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">产品系列</h2>
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Product Lines</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    我们的专业安全解决方案
+                    Safety Solutions for Every Need
                 </p>
                 <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    为各种工业环境提供可靠的安全设备
+                    Reliable protection for industrial environments and material handling operations
                 </p>
             </div>
 
-            <!-- 声光安全系列 -->
+            <!-- Audible & Visual Safety Series -->
             <div class="mt-20">
-                <h2 class="text-2xl font-bold text-gray-900 mb-8">声光安全系列</h2>
-                <div class="flex flex-wrap -mx-4">
-                    <!-- 产品卡片1 -->
-                    <div class="product-card w-full md:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full h-48 object-cover" src="./index_files/sound_light_alarm.jpg" alt="声光报警器">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">声光报警器</h3>
-                                <p class="text-gray-600 mb-4">高亮度LED和响亮警报声，确保在嘈杂环境中也能引起注意。</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-blue-600 font-bold">了解更多</span>
-                                    <button class="text-blue-600 hover:text-blue-800">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </button>
-                                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-8">Audible & Visual Safety Series</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product Card 1 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src="./index_files/sound_light_alarm.jpg" alt="Audible alarm">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Audible Alarm PR-AL200</h3>
+                            <p class="text-gray-600 mb-4">High-decibel alarm with 120dB output for maximum alerting in noisy environments.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold">Learn More</span>
+                                <a href="#alarm-details" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- 产品卡片2 -->
-                    <div class="product-card w-full md:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full h-48 object-cover" src="./index_files/industial_light.jpg" alt="警灯">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">工业用警灯</h3>
-                                <p class="text-gray-600 mb-4">360度可见的高亮度旋转警灯，适用于各种危险区域警示。</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-blue-600 font-bold">了解更多</span>
-                                    <button class="text-blue-600 hover:text-blue-800">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </button>
-                                </div>
+                    <!-- Product Card 2 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src="./index_files/industial_light.jpg" alt="Warning light">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Warning Light PR-WL300</h3>
+                            <p class="text-gray-600 mb-4">360° visible rotating beacon with high-intensity LED illumination.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold">Learn More</span>
+                                <a href="#light-details" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- 产品卡片3 -->
-                    <div class="product-card w-full md:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full h-48 object-cover" src="./index_files/voice_reminder.jpg" alt="语音提示报警器">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">语音提示报警器</h3>
-                                <p class="text-gray-600 mb-4">可定制语音内容，清晰传达安全信息，提升现场安全警示效果。</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-blue-600 font-bold">了解更多</span>
-                                    <button class="text-blue-600 hover:text-blue-800">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </button>
-                                </div>
+                    <!-- Product Card 3 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src="./index_files/voice_reminder.jpg" alt="Voice alarm">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Voice Alarm PR-VA150</h3>
+                            <p class="text-gray-600 mb-4">Programmable voice announcement system with clear audio output.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold">Learn More</span>
+                                <a href="#voice-details" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 叉车安全系列 -->
+            <!-- Forklift Safety Series -->
             <div class="mt-12">
-                <h2 class="text-2xl font-bold text-gray-900 mb-8">叉车安全系列</h2>
-                <div class="flex flex-wrap -mx-4">
-                    <!-- 产品卡片4 -->
-                    <div class="product-card w-full md:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full h-48 object-cover" src="./index_files/over_speed_alarm.jpg" alt="叉车超速报警器">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">叉车超速报警器</h3>
-                                <p class="text-gray-600 mb-4">实时监测叉车速度，超速时自动报警，有效预防因超速引发的事故。</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-blue-600 font-bold">了解更多</span>
-                                    <button class="text-blue-600 hover:text-blue-800">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </button>
-                                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-8">Forklift Safety Series</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product Card 4 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src="./index_files/over_speed_alarm.jpg" alt="Speed alarm">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Speed Alarm PR-SA400</h3>
+                            <p class="text-gray-600 mb-4">Real-time speed monitoring with adjustable threshold alerts.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold">Learn More</span>
+                                <a href="#speed-details" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- 产品卡片5 -->
-                    <div class="product-card w-full md:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full h-48 object-cover" src="./index_files/anti_collision_alarm.jpg" alt="叉车防撞报警器">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">叉车防撞报警器</h3>
-                                <p class="text-gray-600 mb-4">超声波探测技术，在碰撞风险前发出警报，大幅降低叉车碰撞事故。</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-blue-600 font-bold">了解更多</span>
-                                    <button class="text-blue-600 hover:text-blue-800">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </button>
-                                </div>
+                    <!-- Product Card 5 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src="./index_files/anti_collision_alarm.jpg" alt="Collision alarm">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Collision Alarm PR-CA500</h3>
+                            <p class="text-gray-600 mb-4">Ultrasonic detection system with 0.2-3m adjustable range.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold">Learn More</span>
+                                <a href="#collision-details" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- 产品卡片6 -->
-                    <div class="product-card w-full md:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img class="w-full h-48 object-cover" src="./index_files/safe_belt_alarm.jpg" alt="叉车安全带报警器">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">叉车安全带报警器</h3>
-                                <p class="text-gray-600 mb-4">强制提醒操作员系好安全带，未系安全带时叉车无法启动或持续报警。</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-blue-600 font-bold">了解更多</span>
-                                    <button class="text-blue-600 hover:text-blue-800">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </button>
-                                </div>
+                    <!-- Product Card 6 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src="./index_files/safe_belt_alarm.jpg" alt="Seatbelt alarm">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Seatbelt Alarm PR-SB600</h3>
+                            <p class="text-gray-600 mb-4">Operator safety system with persistent alert until belt is fastened.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold">Learn More</span>
+                                <a href="#seatbelt-details" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -294,53 +297,53 @@
         </div>
     </section>
 
-    <!-- 关于我们 -->
+    <!-- About Us Section -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">关于我们</h2>
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">About Proratronic</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    专业工业安全设备制造商
+                    Engineering Safety Since 2010
                 </p>
             </div>
             <div class="mt-10">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
-                        <img class="rounded-lg shadow-xl" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ratronic团队">
+                        <img class="rounded-lg shadow-xl" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1" alt="Proratronic team">
                     </div>
                     <div class="md:w-1/2">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">我们的故事</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
                         <p class="text-gray-600 mb-4">
-                            Ratronic成立于2010年，专注于工业安全设备的研发与生产。我们的使命是通过创新的安全技术，帮助全球企业创造更安全的工作环境。
+                            At Proratronic, we develop industrial safety solutions that protect workers, prevent accidents, and improve operational efficiency in demanding environments.
                         </p>
                         <p class="text-gray-600 mb-4">
-                            经过十余年的发展，我们已成为行业领先的安全解决方案提供商，产品广泛应用于制造业、物流仓储、化工等领域。
+                            Our products are engineered to meet international safety standards while delivering exceptional reliability and performance.
                         </p>
-                        <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">我们的优势</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Why Choose Us</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
                                 <div class="flex-shrink-0 h-6 w-6 text-blue-600">
                                     <i class="fas fa-check-circle"></i>
                                 </div>
-                                <p class="ml-3 text-gray-600">10+年行业经验，深入了解工业安全需求</p>
+                                <p class="ml-3 text-gray-600">13+ years of industry-specific experience</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0 h-6 w-6 text-blue-600">
                                     <i class="fas fa-check-circle"></i>
                                 </div>
-                                <p class="ml-3 text-gray-600">严格的质量控制体系，产品通过多项国际认证</p>
+                                <p class="ml-3 text-gray-600">CE, RoHS, and ISO 9001 certified manufacturing</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0 h-6 w-6 text-blue-600">
                                     <i class="fas fa-check-circle"></i>
                                 </div>
-                                <p class="ml-3 text-gray-600">专业的研发团队，持续创新安全技术</p>
+                                <p class="ml-3 text-gray-600">Global distribution network with local support</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0 h-6 w-6 text-blue-600">
                                     <i class="fas fa-check-circle"></i>
                                 </div>
-                                <p class="ml-3 text-gray-600">全球服务网络，快速响应客户需求</p>
+                                <p class="ml-3 text-gray-600">Custom engineering solutions available</p>
                             </li>
                         </ul>
                     </div>
@@ -349,29 +352,29 @@
         </div>
     </section>
 
-    <!-- 客户评价 -->
+    <!-- Testimonials Section -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center mb-12">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">客户评价</h2>
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Client Testimonials</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    听听我们的客户怎么说
+                    Trusted by Industry Leaders
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- 评价1 -->
+                <!-- Testimonial 1 -->
                 <div class="bg-white p-8 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="flex-shrink-0">
-                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="客户头像">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
                         </div>
                         <div class="ml-4">
-                            <h4 class="text-lg font-medium text-gray-900">张经理</h4>
-                            <p class="text-gray-500">某大型物流公司</p>
+                            <h4 class="text-lg font-medium text-gray-900">John Smith</h4>
+                            <p class="text-gray-500">Warehouse Manager, Logistics Inc.</p>
                         </div>
                     </div>
                     <p class="text-gray-600 italic">
-                        "Ratronic的叉车安全系统帮助我们减少了80%的叉车相关事故，操作员的安全意识也显著提高。"
+                        "Proratronic's forklift safety systems reduced our warehouse accidents by 75% in the first year. Their products are rugged and reliable."
                     </p>
                     <div class="mt-4 flex text-yellow-400">
                         <i class="fas fa-star"></i>
@@ -382,19 +385,19 @@
                     </div>
                 </div>
                 
-                <!-- 评价2 -->
+                <!-- Testimonial 2 -->
                 <div class="bg-white p-8 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="flex-shrink-0">
-                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/44.jpg" alt="客户头像">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
                         </div>
                         <div class="ml-4">
-                            <h4 class="text-lg font-medium text-gray-900">李总监</h4>
-                            <p class="text-gray-500">某化工企业</p>
+                            <h4 class="text-lg font-medium text-gray-900">Sarah Johnson</h4>
+                            <p class="text-gray-500">Safety Officer, Manufacturing Co.</p>
                         </div>
                     </div>
                     <p class="text-gray-600 italic">
-                        "声光报警器在嘈杂的工厂环境中效果非常明显，员工能及时收到安全警示，大大提升了我们的安全管理水平。"
+                        "The audible alarms from Proratronic are the only ones that can be heard clearly over our production line noise. Excellent product quality."
                     </p>
                     <div class="mt-4 flex text-yellow-400">
                         <i class="fas fa-star"></i>
@@ -405,19 +408,19 @@
                     </div>
                 </div>
                 
-                <!-- 评价3 -->
+                <!-- Testimonial 3 -->
                 <div class="bg-white p-8 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="flex-shrink-0">
-                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/75.jpg" alt="客户头像">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client">
                         </div>
                         <div class="ml-4">
-                            <h4 class="text-lg font-medium text-gray-900">王总</h4>
-                            <p class="text-gray-500">某制造企业</p>
+                            <h4 class="text-lg font-medium text-gray-900">Michael Brown</h4>
+                            <p class="text-gray-500">Operations Director, Shipping Terminal</p>
                         </div>
                     </div>
                     <p class="text-gray-600 italic">
-                        "Ratronic的产品质量可靠，售后服务响应迅速，是我们长期信赖的安全设备供应商。"
+                        "We've standardized on Proratronic safety devices across all our facilities. Their technical support is as good as their products."
                     </p>
                     <div class="mt-4 flex text-yellow-400">
                         <i class="fas fa-star"></i>
@@ -431,82 +434,79 @@
         </div>
     </section>
 
-    <!-- 联系我们 -->
+    <!-- Contact Section -->
     <section id="contact" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center mb-12">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">联系我们</h2>
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Contact Us</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    随时为您提供专业咨询
+                    Get in Touchanti_collision_alarm
                 </p>
             </div>
             <div class="flex flex-col md:flex-row">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">联系方式</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 h-6 w-6 text-blue-600">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <p class="ml-3 text-gray-600">中国广东省深圳市南山区科技园</p>
+                            <p class="ml-3 text-gray-600">123 Industrial Park, Safety City, ST 12345</p>
                         </div>
                         <div class="flex items-center">
                             <div class="flex-shrink-0 h-6 w-6 text-blue-600">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
-                            <p class="ml-3 text-gray-600">+86 755 1234 5678</p>
+                            <p class="ml-3 text-gray-600">+1 (555) 123-4567</p>
                         </div>
                         <div class="flex items-center">
                             <div class="flex-shrink-0 h-6 w-6 text-blue-600">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <p class="ml-3 text-gray-600">info@ratronic.com</p>
+                            <p class="ml-3 text-gray-600">sales@proratronic.ltd</p>
                         </div>
                         <div class="flex items-center">
                             <div class="flex-shrink-0 h-6 w-6 text-blue-600">
                                 <i class="fas fa-clock"></i>
                             </div>
-                            <p class="ml-3 text-gray-600">周一至周五: 9:00 - 18:00</p>
+                            <p class="ml-3 text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM GMT</p>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">关注我们</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-600 hover:text-blue-600">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-600 hover:text-blue-600">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
                         <a href="#" class="text-gray-600 hover:text-blue-600">
                             <i class="fab fa-linkedin-in text-xl"></i>
                         </a>
                         <a href="#" class="text-gray-600 hover:text-blue-600">
                             <i class="fab fa-youtube text-xl"></i>
                         </a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">发送消息</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Send a Message</h3>
                     <form class="space-y-4">
                         <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">姓名</label>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
                             <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">邮箱</label>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                             <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700">电话</label>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
                             <input type="tel" id="phone" name="phone" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700">消息</label>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
                             <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
                         </div>
                         <div>
                             <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                                发送消息
+                                Send Message
                             </button>
                         </div>
                     </form>
@@ -515,39 +515,38 @@
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">关于Ratronic</h3>
+                    <h3 class="text-lg font-semibold mb-4">About Proratronic</h3>
                     <p class="text-gray-400">
-                        专业工业安全设备制造商，致力于为全球企业提供高质量的安全解决方案。
+                        Professional manufacturer of industrial safety equipment since 2010.
                     </p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">产品系列</h3>
+                    <h3 class="text-lg font-semibold mb-4">Products</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">声光报警器</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">工业警灯</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">语音提示报警器</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">叉车安全系统</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Audible & Visual Alarms</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Forklift Safety Systems</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Custom Solutions</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white">首页</a></li>
-                        <li><a href="#products" class="text-gray-400 hover:text-white">产品中心</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white">关于我们</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white">联系我们</a></li>
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">订阅通讯</h3>
-                    <p class="text-gray-400 mb-4">订阅我们的通讯，获取最新产品信息和行业动态。</p>
+                    <h3 class="text-lg font-semibold mb-4">Subscribe</h3>
+                    <p class="text-gray-400 mb-4">Get product updates and industry news.</p>
                     <form class="flex">
-                        <input type="email" placeholder="您的邮箱" class="px-4 py-2 w-full rounded-l-md text-gray-900 focus:outline-none">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md text-gray-900 focus:outline-none">
                         <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md">
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -555,36 +554,31 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">© 2023 Ratronic. 保留所有权利。</p>
+                <p class="text-gray-400 text-sm">© 2023 Proratronic Ltd. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white">隐私政策</a>
-                    <a href="#" class="text-gray-400 hover:text-white">使用条款</a>
-                    <a href="#" class="text-gray-400 hover:text-white">Cookie政策</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- 返回顶部按钮 -->
+    <!-- Back to Top Button -->
     <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <script>
-        // 移动端菜单切换
-        const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', function() {
-            const expanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !expanded);
-            mobileMenu.classList.toggle('hidden');
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         });
-        
-        // 返回顶部按钮
-        const backToTopButton = document.getElementById('back-to-top');
-        
+
+        // Back to top button
         window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('back-to-top');
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.remove('opacity-0', 'invisible');
                 backToTopButton.classList.add('opacity-100', 'visible');
@@ -593,8 +587,8 @@
                 backToTopButton.classList.add('opacity-0', 'invisible');
             }
         });
-        
-        backToTopButton.addEventListener('click', function() {
+
+        document.getElementById('back-to-top').addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -607,7 +601,8 @@
             switcher.addEventListener('click', function(e) {
                 e.preventDefault();
                 // 这里可以添加实际的语言切换逻辑
-                alert('语言切换功能将在实际网站中实现');
+                //alert('语言切换功能将在实际网站中实现');
+                window.location.href = './index_cn.html';
             });
         });
         
@@ -616,8 +611,7 @@
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                // 这里可以添加实际的表单提交逻辑
-                alert('感谢您的留言！我们会尽快与您联系。');
+                alert('Thank you for your message! We will contact you soon.');
                 this.reset();
             });
         }
