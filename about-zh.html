@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="了解Proratronic有限公司 - 自2010年起领先的工业安全设备制造商">
+    <meta name="keywords" content="关于proratronic,工业安全公司,安全设备制造商">
+    <link rel="canonical" href="https://www.proratronic.ltd/about-zh" />
+    <title>关于我们 | Proratronic - 工业安全设备制造商</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 保持与英文版相同的样式 */
+        :root {
+            --apple-blue: #0071e3;
+            --apple-light-blue: #2997ff;
+            --apple-gray: #f5f5f7;
+            --apple-dark-gray: #1d1d1f;
+            --apple-light-gray: #86868b;
+            --apple-white: #ffffff;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .mobile-menu {
+            transition: max-height 0.3s ease-out;
+        }
+        
+        /* 时间线样式 */
+        .timeline {
+            position: relative;
+            padding-left: 4rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--apple-light-blue);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -4.5rem;
+            top: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: var(--apple-blue);
+            border: 3px solid var(--apple-light-blue);
+        }
+        
+        /* 团队卡片样式 */
+        .team-card {
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-900">
+    <!-- 导航栏 (与英文版一致) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index-zh.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold text-gray-900">Proratronic</span>
+                    </a>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="index-zh.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            首页
+                        </a>
+                        <a href="products-zh.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            产品
+                        </a>
+                        <a href="about-zh.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            关于我们
+                        </a>
+                        <a href="index-zh.html#contact" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            联系我们
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <!-- 语言切换器 -->
+                    <div class="language-switcher mr-4">
+                        <button class="flex items-center text-gray-700">
+                            <span class="mr-1">中文</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="language-dropdown">
+                            <a href="about.html">English (英文)</a>
+                        </div>
+                    </div>
+                    
+                    <button class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        获取报价
+                    </button>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="about-zh.html" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" id="mobile-menu-button">
+                        <span class="sr-only">打开主菜单</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 移动端菜单 -->
+        <div class="mobile-menu hidden md:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index-zh.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">首页</a>
+                <a href="products-zh.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">产品</a>
+                <a href="about-zh.html" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">关于我们</a>
+                <a href="index-zh.html#contact" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">联系我们</a>
+                <div class="pt-4 pb-3 border-t border-gray-200">
+                    <div class="mt-3 space-y-1">
+                        <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100">获取报价</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 关于我们英雄区域 -->
+    <section class="relative bg-gray-900 text-white">
+        <div class="absolute inset-0">
+            <img class="w-full h-full object-cover opacity-30" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Proratronic工厂">
+        </div>
+        <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">我们的故事</h1>
+            <p class="mt-6 text-xl max-w-3xl">
+                自2010年起，Proratronic从一个小型车间发展成为全球领先的安全技术公司。
+            </p>
+        </div>
+    </section>
+
+    <!-- 关于内容部分 -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">关于Proratronic</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    为现代工作场所设计安全解决方案
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 about-grid">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">我们的使命</h3>
+                    <p class="text-gray-600 mb-6">
+                        在Proratronic，我们相信工作场所安全不容妥协。我们的使命是开发创新、可靠的安全解决方案，保护工人、预防事故，为全球工业环境创造更安全的工作场所。
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        通过持续研发，我们努力保持在安全技术的前沿，预见行业需求。
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">我们的价值观</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-blue-600 mt-1">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">
+                                <span class="font-semibold">安全第一：</span>我们设计的每个产品都将工人安全置于首位
+                            </p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-blue-600 mt-1">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">
+                                <span class="font-semibold">创新：</span>我们挑战传统思维，开发更好的解决方案
+                            </p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-blue-600 mt-1">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">
+                                <span class="font-semibold">质量：</span>严格测试确保我们的产品在关键时刻表现卓越
+                            </p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-blue-600 mt-1">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">
+                                <span class="font-semibold">全球影响：</span>我们致力于改善全球工作场所安全
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">我们的历史</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4 class="text-lg font-semibold">公司成立</h4>
+                            <p class="text-sm text-gray-500">2010年</p>
+                            <p class="text-gray-600 mt-1">
+                                Proratronic成立，专注于工业声音报警器，在一个小型设施中开始运营，仅有5名员工。
+                            </p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-lg font-semibold">首个大合同</h4>
+                            <p class="text-sm text-gray-500">2012年</p>
+                            <p class="text-gray-600 mt-1">
+                                与一家大型汽车制造商签订了首个大规模合同，扩大了我们的生产能力。
+                            </p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-lg font-semibold">产品线扩展</h4>
+                            <p class="text-sm text-gray-500">2015年</p>
+                            <p class="text-gray-600 mt-1">
+                                推出叉车安全系列，标志着我们进入车辆安全系统市场，显著扩大了市场范围。
+                            </p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-lg font-semibold">国际扩张</h4>
+                            <p class="text-sm text-gray-500">2018年</p>
+                            <p class="text-gray-600 mt-1">
+                                在欧洲和北美建立分销合作伙伴关系，开始向全球安全解决方案提供商转型。
+                            </p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-lg font-semibold">新总部</h4>
+                            <p class="text-sm text-gray-500">2022年</p>
+                            <p class="text-gray-600 mt-1">
+                                迁入占地50,000平方英尺的现代化设施，生产能力提升三倍，研发能力增强。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队部分 -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">我们的团队</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    认识我们的领导团队
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    致力于工业安全创新的专业人士
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 team-grid">
+                <!-- 团队成员1 -->
+                <div class="team-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img class="w-full h-64 object-cover" src="https://randomuser.me/api/portraits/men/32.jpg" alt="张伟">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">张伟</h3>
+                        <p class="text-blue-600 font-medium mb-2">创始人兼CEO</p>
+                        <p class="text-gray-600 mb-4">
+                            拥有25年工业安全经验，张伟创立Proratronic是为了解决可靠警告系统中的不足。
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-blue-600">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 团队成员2 -->
+                <div class="team-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img class="w-full h-64 object-cover" src="https://randomuser.me/api/portraits/women/44.jpg" alt="李娜">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">李娜</h3>
+                        <p class="text-blue-600 font-medium mb-2">首席技术官</p>
+                        <p class="text-gray-600 mb-4">
+                            李娜领导我们的研发团队，拥有12项安全设备技术和信号处理专利。
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-blue-600">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 团队成员3 -->
+                <div class="team-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img class="w-full h-64 object-cover" src="https://randomuser.me/api/portraits/men/75.jpg" alt="王强">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">王强</h3>
+                        <p class="text-blue-600 font-medium mb-2">全球运营总监</p>
+                        <p class="text-gray-600 mb-4">
+                            王强负责我们在3大洲的全球制造和分销网络。
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-blue-600">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 认证部分 -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">认证</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    追求卓越
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    我们的产品符合最高国际质量和安全标准
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150x100?text=CE" alt="CE认证" class="h-24 object-contain">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150x100?text=ISO9001" alt="ISO 9001认证" class="h-24 object-contain">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150x100?text=RoHS" alt="RoHS合规" class="h-24 object-contain">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150x100?text=UL" alt="UL认证" class="h-24 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA部分 -->
+    <section class="bg-blue-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                准备好提升您的工作场所安全了吗？
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-xl">
+                我们的专家随时准备帮助您为您的设施选择完美的安全解决方案。
+            </p>
+            <div class="mt-8 flex justify-center">
+                <div class="inline-flex rounded-md shadow">
+                    <a href="index-zh.html#contact" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-gray-50">
+                        联系我们的团队
+                    </a>
+                </div>
+                <div class="ml-3 inline-flex">
+                    <a href="products-zh.html" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900">
+                        浏览产品
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 (与英文版一致) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">关于Proratronic</h3>
+                    <p class="text-gray-400">
+                        自2010年起专业生产工业安全设备。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">产品</h3>
+                    <ul class="space-y-2">
+                        <li><a href="products-zh.html" class="text-gray-400 hover:text-white">声光报警器</a></li>
+                        <li><a href="products-zh.html" class="text-gray-400 hover:text-white">叉车安全系统</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">定制解决方案</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index-zh.html" class="text-gray-400 hover:text-white">首页</a></li>
+                        <li><a href="products-zh.html" class="text-gray-400 hover:text-white">产品</a></li>
+                        <li><a href="about-zh.html" class="text-gray-400 hover:text-white">关于我们</a></li>
+                        <li><a href="index-zh.html#contact" class="text-gray-400 hover:text-white">联系我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">订阅</h3>
+                    <p class="text-gray-400 mb-4">获取产品更新和行业新闻。</p>
+                    <form class="flex">
+                        <input type="email" placeholder="您的邮箱" class="px-4 py-2 w-full rounded-l-md text-gray-900 focus:outline-none">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 Proratronic有限公司。保留所有权利。</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">隐私政策</a>
+                    <a href="#" class="text-gray-400 hover:text-white">服务条款</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookie政策</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 移动菜单切换
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // 返回顶部按钮
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
