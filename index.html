@@ -503,43 +503,69 @@
                 </div>
                 <div class="md:w-1/2">
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Send a Message</h3>
-                    <form id="contactForm" action="https://formsubmit.co/your@email.com" method="POST" class="space-y-4">
-                        <!-- FormSubmit Configuration -->
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://yourusername.github.io/your-repo/thankyou.html">
-                        
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
-                            <input type="tel" id="phone" name="phone" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
+                  <!-- 表单容器 -->
+                   <div id="formContainer">
+        <!-- FormSubmit 表单 -->
+          <form id="contactForm" action="https://formsubmit.co/sales@proratronic.ltd" method="POST" class="space-y-4">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name" required 
+                       class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" required 
+                       class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                <textarea id="message" name="message" rows="4" required 
+                          class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </div>
+            
+            <button type="submit" 
+                    class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <span id="submitText">Send Message</span>
+                <span id="submitSpinner" class="hidden ml-2">
+                    <svg class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                </span>
+            </button>
+        </form>
+     </div>
                     
-                    <!-- Thank you message (hidden by default) -->
-                    <div id="thankYouMessage" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded">
-                        Thank you for your message! We will contact you soon.
-                    </div>
+       <!-- 成功消息模板 (初始隐藏) -->
+    <div id="successMessage" class="hidden mt-6 p-6 bg-green-50 border-l-4 border-green-500 rounded-lg">
+        <div class="flex">
+            <div class="flex-shrink-0">
+                <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+            </div>
+            <div class="ml-3">
+                <h3 class="text-sm font-medium text-green-800">Your message has been sent successfully!</h3>
+                <div class="mt-2 text-sm text-green-700">
+                    <p>Thank you for contacting us. We'll get back to you soon.</p>
+                </div>
+                <div class="mt-4">
+                    <button type="button" onclick="resetForm()" class="text-sm font-medium text-green-700 hover:text-green-600 focus:outline-none">
+                        <span aria-hidden="true">← </span>Send another message
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
+
+<script>
+	
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
@@ -633,52 +659,69 @@
         });
         
     
-     // 表单提交FormSubmit integration
-        const contactForm = document.getElementById('contactForm');
-        const thankYouMessage = document.getElementById('thankYouMessage');
+    // 表单提交处理
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitText = document.getElementById('submitText');
+    const submitSpinner = document.getElementById('submitSpinner');
+    
+    // 显示加载状态
+    submitText.textContent = 'Sending...';
+    submitSpinner.classList.remove('hidden');
+    submitBtn.disabled = true;
+    
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
         
-        if (contactForm) {
-            contactForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                // Show loading state
-                const submitButton = contactForm.querySelector('button[type="submit"]');
-                const originalButtonText = submitButton.textContent;
-                submitButton.textContent = 'Sending...';
-                submitButton.disabled = true;
-                
-                try {
-                    const formData = new FormData(contactForm);
-                    const response = await fetch(contactForm.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-                    
-                    if (response.ok) {
-                        // Show success message
-                        thankYouMessage.classList.remove('hidden');
-                        contactForm.reset();
-                        
-                        // Hide form and show only thank you message
-                        contactForm.style.display = 'none';
-                        
-                        // Scroll to thank you message
-                        thankYouMessage.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                } catch (error) {
-                    alert('There was an error submitting your message. Please try again later.');
-                    console.error('Form submission error:', error);
-                } finally {
-                    submitButton.textContent = originalButtonText;
-                    submitButton.disabled = false;
-                }
+        if (response.ok) {
+            // 显示成功消息
+            document.getElementById('formContainer').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // 滚动到成功消息
+            document.getElementById('successMessage').scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
             });
+        } else {
+            throw new Error('Form submission failed');
         }
-    </script>
+    } catch (error) {
+        // 显示错误提示
+        submitText.textContent = 'Send Message';
+        submitSpinner.classList.add('hidden');
+        submitBtn.disabled = false;
+        
+        alert('There was an error sending your message. Please try again later.');
+        console.error('Form submission error:', error);
+    }
+});
+
+// 重置表单函数
+function resetForm() {
+    document.getElementById('contactForm').reset();
+    document.getElementById('formContainer').classList.remove('hidden');
+    document.getElementById('successMessage').classList.add('hidden');
+    
+    // 重置按钮状态
+    document.getElementById('submitText').textContent = 'Send Message';
+    document.getElementById('submitSpinner').classList.add('hidden');
+    document.querySelector('#contactForm button[type="submit"]').disabled = false;
+    
+    // 滚动回表单
+    document.getElementById('formContainer').scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+}
+</script>
 </body>
 </html>
