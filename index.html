@@ -455,7 +455,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+     <!-- Contact Section -->
     <section id="contact" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center mb-12">
@@ -466,51 +466,23 @@
             </div>
             <div class="flex flex-col md:flex-row">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 h-6 w-6 text-blue-600">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <p class="ml-3 text-gray-600">4th Floor, Building 2, Fu'an Intelligent Manufacturing Industrial Park​, Bao'an district, Shenzhen City, China</p>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 h-6 w-6 text-blue-600">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <p class="ml-3 text-gray-600">sales@proratronic.ltd</p>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 h-6 w-6 text-blue-600">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <p class="ml-3 text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM GMT</p>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Follow Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-600 hover:text-blue-600">
-                            <i class="fab fa-linkedin-in text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-600 hover:text-blue-600">
-                            <i class="fab fa-youtube text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-600 hover:text-blue-600">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                    </div>
+                    <!-- ... (keep your existing contact info) ... -->
                 </div>
                 <div class="md:w-1/2">
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Send a Message</h3>
-                    <form class="space-y-4">
+                    <form id="contactForm" action="https://formsubmit.co/your@email.com" method="POST" class="space-y-4">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://yourusername.github.io/your-repo/thankyou.html">
+                        
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div>
                             <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
@@ -518,7 +490,7 @@
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
                         </div>
                         <div>
                             <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
@@ -526,6 +498,11 @@
                             </button>
                         </div>
                     </form>
+                    
+                    <!-- Thank you message (hidden by default) -->
+                    <div id="thankYouMessage" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded">
+                        Thank you for your message! We will contact you soon.
+                    </div>
                 </div>
             </div>
         </div>
@@ -622,13 +599,51 @@
             });
         });
         
-        // 表单提交
-        const contactForm = document.querySelector('form');
+    
+     // 表单提交FormSubmit integration
+        const contactForm = document.getElementById('contactForm');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+        
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
-                alert('Thank you for your message! We will contact you soon.');
-                this.reset();
+                
+                // Show loading state
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.textContent;
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                try {
+                    const formData = new FormData(contactForm);
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        // Show success message
+                        thankYouMessage.classList.remove('hidden');
+                        contactForm.reset();
+                        
+                        // Hide form and show only thank you message
+                        contactForm.style.display = 'none';
+                        
+                        // Scroll to thank you message
+                        thankYouMessage.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    alert('There was an error submitting your message. Please try again later.');
+                    console.error('Form submission error:', error);
+                } finally {
+                    submitButton.textContent = originalButtonText;
+                    submitButton.disabled = false;
+                }
             });
         }
     </script>
