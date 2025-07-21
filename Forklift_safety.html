@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse Proratronic's full range of industrial safety products including alarms, warning lights and forklift safety systems">
+    <meta name="keywords" content="safety products, industrial alarms, warning devices, forklift safety equipment">
+    <link rel="canonical" href="https://www.proratronic.ltd/products" />
+    <title>Products | Proratronic Ltd - Industrial Safety Equipment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 保持与首页相同的样式 */
+        :root {
+            --apple-blue: #0071e3;
+            --apple-light-blue: #2997ff;
+            --apple-gray: #f5f5f7;
+            --apple-dark-gray: #1d1d1f;
+            --apple-light-gray: #86868b;
+            --apple-white: #ffffff;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-menu {
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+        
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        /* 语言切换器样式 */
+        .language-switcher {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .language-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+        }
+        
+        .language-switcher:hover .language-dropdown {
+            display: block;
+        }
+        
+        .language-dropdown a {
+            color: var(--apple-dark-gray);
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .language-dropdown a:hover {
+            background-color: var(--apple-gray);
+        }
+    </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QVGFP0EE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3QVGFP0EE6');
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17356885033"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17356885033');
+</script>
+    
+<body class="font-sans bg-gray-50 text-gray-900">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+			<span class="text-xl font-bold text-blue-600">Proratronic</span>
+                       
+                    </a>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="https://www.proratronic.ltd" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            Home
+                        </a>
+                        <a href="https://www.proratronic.ltd/Forklift_safety/" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            Forklift Safety
+                        </a>
+
+			<a href="https://www.proratronic.ltd/Audible_visual_alarm/" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                          Audible Visual Alarm
+                        </a>
+                        <a href="index.html#about" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            About Us
+                        </a>
+                        <a href="index.html#contact" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <div class="flex space-x-4">
+                        <a href="#" class="lang-switcher1 px-3 py-2 rounded-md text-sm font-medium bg-blue-50 text-blue-700">EN</a>
+                        <a href="#" class="lang-switcher px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">中文</a>
+                    </div>
+                  <a href="index.html#contact" class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+    Get Quote
+</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="https://www.proratronic.ltd" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="https://www.proratronic.ltd/Forklift_safety/" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Forklift Safety</a>
+	        <a href="https://www.proratronic.ltd/Audible_alarm/" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Audible Alarm</a>
+		<a href="https://www.proratronic.ltd/Audible_visual_alarm/" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Audible Visual alarm</a>
+                <a href="index.html#about" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About Us</a>
+                
+                <div class="pt-4 pb-3 border-t border-gray-200">
+                    <div class="mt-3 space-y-1">
+                        <a href="index.html#contact" class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Product Categories Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h1 class="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Product Range
+                </h1>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    One stop forklift and plant safety solution provider
+
+            <!-- Filter Section -->
+            <div class="mt-12 mb-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="w-full md:w-auto mb-4 md:mb-0">
+                        <h2 class="text-lg font-medium text-gray-900">Filter by Category:</h2>
+                    </div>
+                    <div class="w-full md:w-auto">
+                        <div class="flex space-x-4">
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-md">All</button>
+                            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">Audible & Visual</button>
+                            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">Forklift Safety</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Forklift Safety Series -->
+            <div class="mt-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8">Forklift Safety Series</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product Card 7 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src=".\assets\img\product\forklift_over_speed_alarm\01.jpg" alt="Speed alarm">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Speed Alarm PR-SA400</h3>
+                            <p class="text-gray-600 mb-4">Real-time speed monitoring with adjustable alerts.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold"> </span>
+                                <a href="forklift_over_speed_alarm.html" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 8 -->
+                   <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src=".\assets\img\product\proximity_warning_system\02.jpg" alt="Pedestrian detection">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Pedestrian Detection PR-CA500</h3>
+                            <p class="text-gray-600 mb-4">Advanced system to detect pedestrians near forklifts.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold"> </span>
+                                <a href="Forklift_Proximity_Warning_System.html" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 9 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src=".\assets\img\product\seat_belt_alarm\01.jpg" alt="Seatbelt alarm">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Seatbelt Alarm PR-SB600</h3>
+                            <p class="text-gray-600 mb-4">Persistent alert until belt is fastened.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold"> </span>
+                                <a href="Seatbelt_Alarm.html" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 10 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src=".\assets\img\product\forklift_camera\04.jpg" alt="Forklift camera">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Forklift Camera PR-FC700</h3>
+                            <p class="text-gray-600 mb-4">Rear-view camera system for forklifts.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold"> </span>
+                                <a href="forklift_camera.html" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 11 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src=".\assets\img\product\forklift_safety_light\forklift_blue_spot_light\02.jpg" alt="Pedestrian detection">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">forklift safety light PR-SL910</h3>
+                            <p class="text-gray-600 mb-4">Complete forklift safety lights with multiple devices.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold"> </span>
+                                <a href="forklift_safety_light_blue_spot_light.html" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 12 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-48 object-cover" src=".\assets\img\product\forklift_safety_light\forklift_arc_light\01.jpg" alt="Forklift safety kit">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">forklift safety light PR-SL900</h3>
+                            <p class="text-gray-600 mb-4">Complete forklift safety lights with multiple devices.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-600 font-bold"></span>
+                                <a href="forklift_safety_light_arc_light.html" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-12 flex justify-center">
+                <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                    <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span class="sr-only">Previous</span>
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" aria-current="page" class="z-10 bg-blue-50 border-blue-500 text-blue-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                        1
+                    </a>
+                    <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                        2
+                    </a>
+                    <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                        3
+                    </a>
+                    <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">
+                        ...
+                    </span>
+                    <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                        8
+                    </a>
+                    <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span class="sr-only">Next</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (与首页一致) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About Proratronic</h3>
+                    <p class="text-gray-400">
+                        Professional manufacturer of industrial safety equipment since 2010.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="products.html" class="text-gray-400 hover:text-white">Audible & Visual Alarms</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white">Forklift Safety Systems</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Custom Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Subscribe</h3>
+                    <p class="text-gray-400 mb-4">Get product updates and industry news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md text-gray-900 focus:outline-none">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 Proratronic Ltd. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle with animation
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('active');
+            
+            // Change the icon based on menu state
+            const icon = this.querySelector('svg');
+            if (menu.classList.contains('active')) {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+            } else {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            }
+        });
+
+        // Close menu when clicking on a link (for mobile)
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.remove('active');
+                document.getElementById('mobile-menu-button').querySelector('svg').innerHTML = 
+                    '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            });
+        });
+
+        // Back to top button
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
