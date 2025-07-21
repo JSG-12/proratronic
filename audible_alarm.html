@@ -583,10 +583,30 @@
     </button>
 
     <script>
-        // Mobile menu toggle
+        // Mobile menu toggle with animation
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
+            
+            // 切换active类以触发动画
+            menu.classList.toggle('active');
+            
+            // Change the icon based on menu state
+            const icon = this.querySelector('svg');
+            if (menu.classList.contains('active')) {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+            } else {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            }
+        });
+
+         // Close menu when clicking on a link (for mobile)
+         document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.remove('active');
+                document.getElementById('mobile-menu-button').querySelector('svg').innerHTML = 
+                    '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            });
         });
 
         // Back to top button
@@ -607,32 +627,6 @@
                 behavior: 'smooth'
             });
         });
-
-        // Product image switcher
-        function changeMainImage(element) {
-            const mainImage = document.getElementById('mainImage');
-            mainImage.src = element.src;
-            mainImage.alt = element.alt;
-        }
-
-        // Tab functionality
-        function openTab(evt, tabName) {
-            // Hide all tab content
-            const tabContents = document.getElementsByClassName('tab-content');
-            for (let i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.remove('active');
-            }
-
-            // Remove active class from all tab buttons
-            const tabButtons = document.getElementsByClassName('tab-button');
-            for (let i = 0; i < tabButtons.length; i++) {
-                tabButtons[i].classList.remove('active');
-            }
-
-            // Show the current tab and add active class to the button
-            document.getElementById(tabName).classList.add('active');
-            evt.currentTarget.classList.add('active');
-        }
     </script>
 </body>
 </html>
