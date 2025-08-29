@@ -81,26 +81,58 @@
             background-color: var(--apple-gray);
         }
     </style>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QVGFP0EE6"></script>
+<!-- <-CONTACT US-conversion tracking-> -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+window.addEventListener('load', function (ev) {
+document.querySelectorAll('a[href="index.html#contact"]').forEach(function (x) {
+x.addEventListener('click', function (e) {
+gtag('event', 'conversion', {'send_to': 'AW-17356885033/-annCNrUyo4bEKmYtNRA'});
+});
+});
+});
+</script>
+<!-- <-Get Quote-conversion tracking-> -->
+<script>
+window.addEventListener('load', function (ev) {
+document.querySelectorAll('a[href="#contact"]').forEach(function (x) {
+x.addEventListener('click', function (e) {
+gtag('event', 'conversion', {'send_to': 'AW-17356885033/s2NECNfUyo4bEKmYtNRA'});
+});
+});
+});
+</script>
+<!-- Event snippet for 提交潜在客户表单 conversion page -->
+<script>
+document.addEventListener('click', function (e) {
+document.addEventListener('点击', 函数 (e) {
+const dom = e.target.closest('button[type="submit"]');
+const dom = e.target.closest('按钮[type="提交"]');
+if (dom === null) return;
+const form = dom.closest('form');
+var name = form.querySelector('[name="name"]').value;
+var email = form.querySelector('[name="email"]').value;
+var phone = form.querySelector('[name="phone_number"]').value;
+var message = form.querySelector('[name="message"]').value;
+
+if (email != "" && message != "") {
+gtag('set', 'user_data', { "email": email });
+gtag('event', 'conversion', { 'send_to': 'AW-17356885033/awY5CLjygvUaEKmYtNRA' });
+gtag('事件', '转化', { 'send_to': 'AW-17356885033/awY5CLjygvUaEKmYtNRA' });
+}
+});
+</script>
+	
+	<!-- Google tag (gtag.js) -->    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QVGFP0EE6"></script>  
+<script>
+  window.dataLayer = window.dataLayer || [];  
+  function gtag(){dataLayer.push(arguments);}  
   gtag('js', new Date());
 
   gtag('config', 'G-3QVGFP0EE6');
-</script>
+</script>  
+</head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17356885033"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17356885033');
-</script>
 
 <body class="font-sans bg-gray-50 text-gray-900">
     <!-- Navigation Bar -->
@@ -746,3 +778,4 @@
     </script>
 </body>
 </html>
+
